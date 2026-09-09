@@ -1,0 +1,6 @@
+{
+  "name": "MSAADA",
+  "description": "Tanzanian everyday-life utility application: Zana Rahisi. Kazi Rahisi. Maisha Rahisi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

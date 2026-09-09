@@ -1,0 +1,10 @@
+{
+  "files.exclude": {
+    "**/.gradle": true,
+    "**/build": true,
+    "**/.idea": true
+  },
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "kotlin.languageServer.enabled": true,
+  "editor.formatOnSave": false
+}

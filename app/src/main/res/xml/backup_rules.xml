@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- Keep the user's offline MSAADA data restorable without backing up cache files. -->
+    <include domain="database" path="." />
+    <include domain="sharedpref" path="msaada_app_preferences.xml" />
+    <exclude domain="cache" path="." />
+    <exclude domain="no_backup" path="." />
+</full-backup-content>

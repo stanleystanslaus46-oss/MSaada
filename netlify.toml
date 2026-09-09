@@ -1,0 +1,25 @@
+[build]
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/verify-subscription"
+  to = "/.netlify/functions/verify-subscription"
+  status = 200
+
+[[redirects]]
+  from = "/api/submit-payment"
+  to = "/.netlify/functions/submit-payment"
+  status = 200
+
+[[redirects]]
+  from = "/api/admin/create-activation"
+  to = "/.netlify/functions/create-activation"
+  status = 200
+
+[[redirects]]
+  from = "/api/redeem-pro"
+  to = "/.netlify/functions/redeem-pro"
+  status = 200

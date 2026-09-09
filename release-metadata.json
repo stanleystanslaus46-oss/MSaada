@@ -1,0 +1,13 @@
+{
+  "project": "MSAADA",
+  "phase": 10,
+  "applicationId": "com.aistudio.msaada.tzapp",
+  "versionCode": 1,
+  "versionName": "1.0",
+  "proMonthlyProductId": "msaada_pro_monthly",
+  "proYearlyProductId": "msaada_pro_yearly",
+  "billingAuthority": "backend_verified_google_play",
+  "releaseBuildTestedHere": false,
+  "realDeviceQaRequired": true,
+  "playConsoleTestingRequired": true
+}

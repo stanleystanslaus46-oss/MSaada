@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "MSAADA: assembleDebug",
+      "type": "shell",
+      "windows": { "command": ".\\gradlew.bat", "args": ["assembleDebug"] },
+      "linux": { "command": "./gradlew", "args": ["assembleDebug"] },
+      "osx": { "command": "./gradlew", "args": ["assembleDebug"] },
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "MSAADA: installDebug",
+      "type": "shell",
+      "windows": { "command": ".\\gradlew.bat", "args": ["installDebug"] },
+      "linux": { "command": "./gradlew", "args": ["installDebug"] },
+      "osx": { "command": "./gradlew", "args": ["installDebug"] },
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "MSAADA: testDebugUnitTest",
+      "type": "shell",
+      "windows": { "command": ".\\gradlew.bat", "args": ["testDebugUnitTest"] },
+      "linux": { "command": "./gradlew", "args": ["testDebugUnitTest"] },
+      "osx": { "command": "./gradlew", "args": ["testDebugUnitTest"] },
+      "group": "test",
+      "problemMatcher": []
+    }
+  ]
+}
