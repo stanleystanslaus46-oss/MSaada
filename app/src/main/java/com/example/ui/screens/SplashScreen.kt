@@ -36,7 +36,7 @@ fun SplashScreen(
             painter = painterResource(id = R.drawable.msaada_splash_screen),
             contentDescription = "MSAADA",
             modifier = Modifier.fillMaxSize(),
-            contentScale = ContentScale.Fit
+            contentScale = ContentScale.FillBounds
         )
     }
 }
