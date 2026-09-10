@@ -32,6 +32,8 @@ data class SavedDocument(
     val totalAmount: Double = 0.0,
     val contentJson: String = "",
     val isProTemplate: Boolean = false,
+    val fileUri: String = "",
+    val fileMimeType: String = "application/pdf",
     val createdAt: Long = System.currentTimeMillis()
 )
 

@@ -38,13 +38,20 @@ import com.example.data.model.BiasharaProduct
         KikobaGroup::class,
         BiasharaProduct::class
     ],
-    version = 3,
+    version = 4,
     exportSchema = false
 )
 abstract class MsaadaDatabase : RoomDatabase() {
     abstract fun appDao(): AppDao
 
     companion object {
+        private val MIGRATION_3_4 = object : Migration(3, 4) {
+            override fun migrate(database: SupportSQLiteDatabase) {
+                database.execSQL("ALTER TABLE saved_documents ADD COLUMN fileUri TEXT NOT NULL DEFAULT ''")
+                database.execSQL("ALTER TABLE saved_documents ADD COLUMN fileMimeType TEXT NOT NULL DEFAULT 'application/pdf'")
+            }
+        }
+
         private val MIGRATION_2_3 = object : Migration(2, 3) {
             override fun migrate(database: SupportSQLiteDatabase) {
                 database.execSQL("ALTER TABLE biashara_products ADD COLUMN fixedCosts REAL NOT NULL DEFAULT 0.0")
@@ -61,7 +68,7 @@ abstract class MsaadaDatabase : RoomDatabase() {
                     MsaadaDatabase::class.java,
                     "msaada_database.db"
                 )
-                    .addMigrations(MIGRATION_2_3)
+                    .addMigrations(MIGRATION_2_3, MIGRATION_3_4)
                     .build()
                 INSTANCE = instance
                 instance
