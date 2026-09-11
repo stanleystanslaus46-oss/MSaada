@@ -367,6 +367,12 @@ class MsaadaViewModel(application: Application) : AndroidViewModel(application) 
         }
     }
 
+    fun updateDocumentFile(id: Long, fileUri: String, fileMimeType: String) {
+        viewModelScope.launch {
+            repository.updateDocumentFile(id, fileUri, fileMimeType)
+        }
+    }
+
     fun deleteDocument(doc: SavedDocument) {
         viewModelScope.launch {
             repository.deleteDocument(doc)

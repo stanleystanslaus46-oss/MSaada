@@ -65,6 +65,8 @@ interface AppDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertDocument(doc: SavedDocument): Long
+    @Query("UPDATE saved_documents SET fileUri = :fileUri, fileMimeType = :fileMimeType WHERE id = :id")
+    suspend fun updateDocumentFile(id: Long, fileUri: String, fileMimeType: String)
 
     @Delete
     suspend fun deleteDocument(doc: SavedDocument)

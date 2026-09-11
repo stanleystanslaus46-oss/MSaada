@@ -41,6 +41,7 @@ class AppRepository(
     val savedDocuments: Flow<List<SavedDocument>> = dao.getAllDocuments()
     suspend fun getDocument(id: Long) = dao.getDocumentById(id)
     suspend fun saveDocument(doc: SavedDocument) = dao.insertDocument(doc)
+    suspend fun updateDocumentFile(id: Long, fileUri: String, fileMimeType: String) = dao.updateDocumentFile(id, fileUri, fileMimeType)
     suspend fun deleteDocument(doc: SavedDocument) = dao.deleteDocument(doc)
 
     // Study
